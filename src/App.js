@@ -127,7 +127,7 @@ function App() {
       {/* 👇 Dileep Footer Branding */}
       <div style={{ marginTop: "3rem" }}>
         <img
-          src="/Dileep..jpg"
+          src="/Dileep.png"
           alt="Dileep Logo"
           style={{ height: "50px", marginBottom: "0.5rem" }}
         />
