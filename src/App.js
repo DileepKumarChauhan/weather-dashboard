@@ -8,7 +8,6 @@ function App() {
 
   const apiKey = "04b005fc2679b9517ade52b96b19abfb";
 
-  // 🌐 Get weather by coordinates
   const fetchWeatherByCoords = async (lat, lon) => {
     try {
       setLoading(true);
@@ -31,7 +30,6 @@ function App() {
     }
   };
 
-  // 📍 Handle location button click
   const handleUseMyLocation = () => {
     if ("geolocation" in navigator) {
       setLoading(true);
@@ -51,7 +49,6 @@ function App() {
     }
   };
 
-  // 🔍 Search weather by city name
   const fetchWeather = async () => {
     if (!city) return;
     try {
@@ -94,7 +91,15 @@ function App() {
       <br />
       <button
         onClick={handleUseMyLocation}
-        style={{ marginTop: "1rem", padding: "0.5rem 1rem", backgroundColor: "#4CAF50", color: "white", border: "none", borderRadius: "5px" }}
+        style={{
+          marginTop: "1rem",
+          padding: "0.5rem 1rem",
+          backgroundColor: "#4CAF50",
+          color: "white",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
       >
         📍 Use My Location
       </button>
@@ -106,7 +111,9 @@ function App() {
       {weather && !loading && (
         <div style={{ marginTop: "2rem" }}>
           <h3>📍 Today’s Weather</h3>
-          <h2>{weather.name}, {weather.sys.country}</h2>
+          <h2>
+            {weather.name}, {weather.sys.country}
+          </h2>
           <p>🌡 Temperature: {weather.main.temp}°C</p>
           <p>🌬 Wind: {weather.wind.speed} m/s</p>
           <p>☁ Condition: {weather.weather[0].description}</p>
@@ -116,6 +123,18 @@ function App() {
           />
         </div>
       )}
+
+      {/* 👇 Dileep Footer Branding */}
+      <div style={{ marginTop: "3rem" }}>
+        <img
+          src="/Dileep.png"
+          alt="Dileep Logo"
+          style={{ height: "50px", marginBottom: "0.5rem" }}
+        />
+        <p style={{ fontSize: "14px", color: "#666" }}>
+          🔧 Created by <strong>Dileep</strong>
+        </p>
+      </div>
     </div>
   );
 }
