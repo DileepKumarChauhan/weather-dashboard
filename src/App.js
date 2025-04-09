@@ -127,12 +127,12 @@ function App() {
       {/* 👇 Dileep Footer Branding */}
       <div style={{ marginTop: "3rem" }}>
         <img
-          src="/Dileep.jpg"
+          src="/Dileep.png"
           alt="Dileep Logo"
           style={{ height: "50px", marginBottom: "0.5rem" }}
         />
         <p style={{ fontSize: "14px", color: "#666" }}>
-      🙋🏻‍♂ Created by <strong>Dileep</strong>
+          🙋🏻‍♂ Created by <strong>Dileep</strong>
         </p>
       </div>
     </div>
