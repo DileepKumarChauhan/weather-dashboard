@@ -14,7 +14,7 @@ function App() {
       const res = await fetch(url);
       const data = await res.json();
 
-      console.log("Response:", data); 
+      console.log("Response:", data);
 
       if (data.cod === 200) {
         setWeather(data);
@@ -47,15 +47,15 @@ function App() {
 
       {weather && (
         <div style={{ marginTop: "2rem" }}>
+          <h3>📍 Today’s Weather</h3> {/* ← This is the added line */}
           <h2>{weather.name}</h2>
           <p>🌡 Temperature: {weather.main.temp}°C</p>
           <p>🌬 Wind: {weather.wind.speed} m/s</p>
           <p>☁ Condition: {weather.weather[0].description}</p>
           <img
-  src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-  alt="weather icon"
-/>
-
+            src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+            alt="weather icon"
+          />
         </div>
       )}
     </div>
