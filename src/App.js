@@ -79,7 +79,7 @@ function App() {
 
       <input
         type="text"
-        placeholder="Enter city (e.g., Birgunj, Paris)"
+        placeholder="Enter city (e.g.Bhubaneshwar,Birgunj,)"
         value={city}
         onChange={(e) => setCity(e.target.value)}
         style={{ padding: "0.5rem", marginRight: "0.5rem" }}
@@ -109,7 +109,17 @@ function App() {
       {error && <p style={{ color: "red", marginTop: "1rem" }}>{error}</p>}
 
       {weather && !loading && (
-        <div style={{ marginTop: "2rem" }}>
+        <div style={{
+          marginTop: "2rem",
+          maxWidth: "400px",
+          marginLeft: "auto",
+          marginRight: "auto",
+          border: "1px solid #ccc",
+          borderRadius: "8px",
+          padding: "1.5rem",
+          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+          backgroundColor: "#f9f9f9"
+        }}>
           <h3>📍 Today’s Weather</h3>
           <h2>
             {weather.name}, {weather.sys.country}
