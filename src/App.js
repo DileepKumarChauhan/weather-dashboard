@@ -132,7 +132,7 @@ function App() {
           style={{ height: "50px", marginBottom: "0.5rem" }}
         />
         <p style={{ fontSize: "14px", color: "#666" }}>
-        🙋🏻‍♂Created by <strong>Dileep</strong>
+        🙋🏻‍♂ Created by <strong>Dileep</strong>
         </p>
       </div>
     </div>
