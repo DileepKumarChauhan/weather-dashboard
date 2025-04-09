@@ -74,12 +74,12 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "2rem" }}>
+    <div style={{ textAlign: "center", padding: "2rem", backgroundColor: "#e0f0ff", minHeight: "100vh" }}>
       <h1>🌤️ Weather Dashboard</h1>
 
       <input
         type="text"
-        placeholder="Enter city (e.g.Bhubaneshwar,Birgunj,)"
+        placeholder="Enter city (e.g., Birgunj, Paris)"
         value={city}
         onChange={(e) => setCity(e.target.value)}
         style={{ padding: "0.5rem", marginRight: "0.5rem" }}
