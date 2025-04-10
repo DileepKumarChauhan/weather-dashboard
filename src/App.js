@@ -39,8 +39,8 @@ function App() {
           fetchWeatherByCoords(latitude, longitude);
         },
         (err) => {
-          console.error(err);
-          setError("Location permission denied.");
+          console.error("Geolocation Error:", err);
+          setError("Location access denied. Please allow location in your browser settings and reload.");
           setLoading(false);
         }
       );
@@ -103,6 +103,10 @@ function App() {
       >
         📍 Use My Location
       </button>
+
+      <p style={{ fontSize: "12px", color: "#666", marginTop: "0.5rem" }}>
+        ℹ️ If blocked, allow location access in browser settings and reload.
+      </p>
 
       {loading && <p style={{ marginTop: "1rem" }}>🔄 Loading weather...</p>}
 
