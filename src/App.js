@@ -105,8 +105,7 @@ function App() {
       </button>
 
       <p style={{ fontSize: "12px", color: "#666", marginTop: "0.5rem" }}>
-        ℹ️ If blocked, allow location access in browser settings and reload.<br />
-        🔒 If you selected "Never Allow": Click the lock icon 🔒 in the address bar → Site settings → Location → <strong>Allow</strong> → Reload the page.
+        
       </p>
 
       {loading && <p style={{ marginTop: "1rem" }}>🔄 Loading weather...</p>}
