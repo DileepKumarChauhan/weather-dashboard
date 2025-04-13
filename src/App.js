@@ -79,7 +79,7 @@ function App() {
 
       <input
         type="text"
-        placeholder="Enter city "
+        placeholder="Enter city name "
         value={city}
         onChange={(e) => setCity(e.target.value)}
         style={{ padding: "0.5rem", marginRight: "0.5rem" }}
