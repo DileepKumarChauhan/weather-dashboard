@@ -79,7 +79,7 @@ function App() {
 
       <input
         type="text"
-        placeholder="Enter city (e.g., Birgunj, Paris)"
+        placeholder="Enter city "
         value={city}
         onChange={(e) => setCity(e.target.value)}
         style={{ padding: "0.5rem", marginRight: "0.5rem" }}
@@ -130,11 +130,13 @@ function App() {
           </h2>
           <p>🌡 Temperature: {weather.main.temp}°C</p>
           <p>💧 Humidity: {weather.main.humidity}%</p>
-          <p>🌬 Wind: {weather.wind.speed} m/s</p>
+          <p> 🍃Wind: {weather.wind.speed} m/s</p>
           <p>☁ Condition: {weather.weather[0].description}</p>
           <img
-            src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+            src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
             alt="weather icon"
+            style={{ filter: "brightness(0.6)" }}
+
           />
         </div>
       )}
